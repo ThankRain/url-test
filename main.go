@@ -12,9 +12,9 @@ import (
 // const name = "test(unlabeled).csv"
 // const folder = "result/test"
 // const kv = "kv_test.txt"
-const name = "train1.csv"
-const folder = "result"
-const kv = "kv.txt"
+const name = "train_sample.csv" // 需要爬取的URL集合 data/origin/{name}
+const folder = "result"         // 输出结果的文件夹 data/{folder} 需要文件夹已创建（懒得写自动创建文件夹）
+const kv = "kv.txt"             // 暂停程序后保存的当前爬取结果统计文件 data/{kv}
 
 func HandleHttpRequest(ctx context.Context, w http.ResponseWriter, req *http.Request) error {
 	body, err := io.ReadAll(req.Body)
